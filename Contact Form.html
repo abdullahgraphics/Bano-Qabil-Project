@@ -303,21 +303,7 @@
             <li><a href="Contact%20Form.html" class="active">CONTACT</a></li>
         </ul>
     </nav>
-    <form
-  action="https://formspree.io/f/xljelgrd"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+  
 
     <!-- CONTACT SECTION -->
     <section class="contact-section">
@@ -377,29 +363,22 @@
 
                 <!-- CONTACT FORM -->
                 <div class="contact-form-box">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Project details or topic">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xljelgrd"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your file:
+    <input type="file" name="upload">
+  </label>
+  <button type="submit">Send</button>
+</form>
                 </div>
 
             </div>
