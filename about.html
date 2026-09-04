@@ -1,237 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head><style>
+body{
+    background-image: url(images/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+</style>
+<style>
+a {
+    color: white;
+    text-decoration: none;
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="s">
+</head>
+<body>
+    <!-- GOOD (Is se link sahi chale ga): -->
+<li><a href="about.html">CONTACT</a></li>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About | Abdullah Graphics</title>
-    
-    <!-- Google Fonts -->
+
+    <!-- Poppins Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
     <style>
-        /* Global Styles */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-shadow: none !important;
-            filter: none !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0c1425;
-            color: #ffffff;
-            min-height: 100vh;
-            overflow-x: hidden;
+            background: #0c1425;
+            color: white;
         }
 
-        /* NAVBAR */
+
+        /* =====================================
+           NAVBAR
+        ===================================== */
+
         .navbar {
-            height: 62px;
             width: 100%;
+            height: 62px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 0 24px;
+
             background: #0c1425;
-            border-bottom: 1px solid rgba(100, 130, 170, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+
+            border-bottom: 1px solid
+                rgba(80, 110, 150, 0.10);
         }
+
+
+        /* LOGO */
 
         .logo {
             text-decoration: none;
+
             font-size: 20px;
             font-weight: 700;
+
+            letter-spacing: 0.4px;
         }
 
         .logo-name {
-            color: #2998e8;
+            background: linear-gradient(
+                90deg,
+                #2998e8,
+                #2db8a0
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
         }
 
         .logo-text {
-            color: #ffffff;
+            color: #f1f1f1;
         }
+
+
+        /* NAV LINKS */
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+
+            gap: 34px;
+
             list-style: none;
         }
 
         .nav-links a {
+            color: #9da6b5;
+
             text-decoration: none;
-            color: #a0a7b5;
+
             font-size: 14px;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s ease;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover {
             color: #2998e8;
         }
 
-        /* ABOUT SECTION */
+
+        /* =====================================
+           ABOUT SECTION
+        ===================================== */
+
         .about-section {
-            padding: 60px 24px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-label {
-            color: #2998e8;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .section-title span {
-            color: #28bd83;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .about-card {
-            background: #111d35;
-            border: 1px solid rgba(100, 130, 170, 0.2);
-            border-radius: 12px;
-            padding: 35px;
-        }
-
-        .about-card h2 {
-            font-size: 24px;
-            color: #2998e8;
-            margin-bottom: 15px;
-        }
-
-        .about-card p {
-            color: #8da4c4;
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .skill-item h4 {
-            font-size: 14px;
-            color: #ffffff;
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .skill-bar {
             width: 100%;
-            height: 8px;
-            background: #09101f;
-            border-radius: 4px;
+
+            min-height: 535px;
+
+            background: #1a2a4d;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 70px 55px;
+
+            position: relative;
+
             overflow: hidden;
         }
 
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #2998e8, #28bd83);
-            border-radius: 4px;
+
+        /* SUBTLE BACKGROUND GRID */
+
+        .about-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(100, 130, 170, 0.035) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(100, 130, 170, 0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
         }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 0 16px;
+
+        /* ABOUT CONTAINER */
+
+        .about-container {
+
+            width: 100%;
+
+            max-width: 1240px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =====================================
+           LEFT SIDE
+        ===================================== */
+
+        .about-text {
+            max-width: 600px;
+        }
+
+
+        .about-label {
+
+            color: #2998e8;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .about-text h1 {
+
+            color: #f5f5f5;
+
+            font-size: 46px;
+
+            line-height: 1.2;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-text h1 span {
+
+            background: linear-gradient(
+                90deg,
+                #2998e8,
+                #25c278
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+        }
+
+
+        .about-text p {
+
+            color: #7895c0;
+
+            font-size: 16px;
+
+            line-height: 1.65;
+
+            font-weight: 400;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================
+           RIGHT SIDE CARDS
+        ===================================== */
+
+        .services-box {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 24px;
+        }
+
+
+        .service-card {
+
+            height: 134px;
+
+            border: 1px solid
+                rgba(100, 130, 170, 0.22);
+
+            border-radius: 12px;
+
+            background: rgba(12, 20, 37, 0.20);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            transition: 0.3s ease;
+        }
+
+
+        .service-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: #2998e8;
+
+            background: rgba(12, 25, 50, 0.35);
+        }
+
+
+        /* =====================================
+           ICONS
+        ===================================== */
+
+        .service-icon {
+
+            width: 34px;
+
+            height: 34px;
+
+            margin-bottom: 10px;
+
+            color: #398fff;
+        }
+
+
+        .service-icon svg {
+
+            width: 100%;
+
+            height: 100%;
+
+            stroke: currentColor;
+
+            fill: none;
+
+            stroke-width: 1.8;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+        }
+
+
+        .service-card h3 {
+
+            color: #f2f2f2;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin: 0;
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 900px) {
+
+            .about-section {
+
+                padding: 70px 30px;
             }
+
+            .about-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .about-text {
+
+                max-width: 700px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+
+                padding: 0 15px;
+            }
+
+            .logo {
+
+                font-size: 16px;
+            }
+
             .nav-links {
+
                 gap: 12px;
             }
+
             .nav-links a {
-                font-size: 12px;
+
+                font-size: 9px;
+
+                letter-spacing: 0.5px;
             }
-            .about-grid {
+
+
+            .about-section {
+
+                padding: 60px 20px;
+            }
+
+
+            .about-text h1 {
+
+                font-size: 36px;
+            }
+
+
+            .about-text p {
+
+                font-size: 14px;
+            }
+
+
+            .services-box {
+
                 grid-template-columns: 1fr;
             }
+
+
+            .service-card {
+
+                height: 125px;
+            }
+
         }
+
     </style>
+
 </head>
+
+
 <body>
 
-    <!-- NAVBAR -->
+
+    <!-- =====================================
+         NAVBAR
+    ===================================== -->
+
     <nav class="navbar">
+
+        <!-- LOGO -->
+
         <a href="index.html" class="logo">
-            <span class="logo-name">Abdullah</span>
-            <span class="logo-text">Graphics</span>
+
+            <span class="logo-name">
+                Abdullah
+            </span>
+
+            <span class="logo-text">
+                Graphics
+            </span>
+
         </a>
 
+
+        <!-- NAVIGATION -->
+
         <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="about.html" class="active">ABOUT</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="Contact%20Form.html">CONTACT</a></li>
+
+            <li>
+                <a href="about.html">
+                    HOME
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    PORTFOLIO
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    ABOUT
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    SERVICES
+                </a>
+            </li>
+
+            <li>
+                <a href="contact form.html">
+                    CONTACT
+                </a>
+            </li>
+
         </ul>
+
     </nav>
 
-    <!-- ABOUT SECTION -->
+
+
+    <!-- =====================================
+         ABOUT SECTION
+    ===================================== -->
+
     <section class="about-section">
-        <div class="section-header">
-            <p class="section-label">Who I Am</p>
-            <h1 class="section-title">About <span>Me</span></h1>
-        </div>
 
-        <div class="about-grid">
-            <!-- Left Info Box -->
-            <div class="about-card">
-                <h2>Graphic Designer & Web Developer</h2>
-                <p>Hello! I am Abdullah, a passionate Graphic Designer and Front-End Web Developer dedicated to creating visual assets and functional websites.</p>
-                <p>I specialize in modern branding, high-impact creative designs, and building clean, responsive web user interfaces.</p>
-            </div>
+        <div class="about-container">
 
-            <!-- Right Skills Box -->
-            <div class="about-card">
-                <h2 style="color: #28bd83;">My Expertise</h2>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <h4>Graphic Design <span>90%</span></h4>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h4>HTML & CSS <span>85%</span></h4>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <h4>JavaScript <span>75%</span></h4>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-                    </div>
+
+            <!-- LEFT -->
+
+            <div class="about-text">
+
+                <div class="about-label">
+                    ABOUT ME
                 </div>
+
+
+                <h1>
+                    Hello, I’m
+                    <span>Abdullah</span>
+                </h1>
+
+
+                <p>
+                    I'm a passionate graphic designer specializing in
+                    creating stunning visual identities for modern brands.
+                    With a keen eye for detail and a love for clean,
+                    minimal design, I help businesses stand out through
+                    thoughtful logos, impactful flyers, and premium
+                    business cards.
+                </p>
+
+
+                <p>
+                    Every project is an opportunity to tell a story through
+                    design. I believe in crafting visuals that are not only
+                    beautiful but also purposeful and memorable.
+                </p>
+
             </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="services-box">
+
+
+                <!-- LOGO DESIGN -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M4 15l6-6 5 5-6 6H4v-5z"/>
+
+                            <path d="M13 7l2-2 6 6-2 2"/>
+
+                            <circle cx="8" cy="16" r="1"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        LOGO DESIGN
+                    </h3>
+
+                </div>
+
+
+
+                <!-- FLYER DESIGN -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <rect
+                                x="5"
+                                y="4"
+                                width="14"
+                                height="16"
+                                rx="1"
+                            />
+
+                            <path d="M5 9h14"/>
+
+                            <path d="M9 4v5"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        FLYER DESIGN
+                    </h3>
+
+                </div>
+
+
+
+                <!-- BUSINESS CARD -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M12 3a9 9 0 1 0 0 18"/>
+
+                            <circle cx="8" cy="10" r="1"/>
+
+                            <circle cx="12" cy="7" r="1"/>
+
+                            <circle cx="16" cy="10" r="1"/>
+
+                            <path d="M12 21c0-3 2-5 5-5h2"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        BUSINESS CARD DESIGN
+                    </h3>
+
+                </div>
+
+
+
+                <!-- BRANDING -->
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="5"
+                            />
+
+                            <path d="M9 12l-1 9 4-3 4 3-1-9"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        BRANDING
+                    </h3>
+
+                </div>
+
+
+            </div>
+
         </div>
+
     </section>
 
+
 </body>
+</html>
+
+
+</body>
+<script src="script.js"></script>
 </html>
