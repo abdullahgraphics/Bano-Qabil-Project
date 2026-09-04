@@ -1,177 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><style>
-body{
-    background-image: url(images/Background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-}
-</style>
-<style>
-a {
-    color: white;
-    text-decoration: none;
-}
-</style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="s">
-</head>
-<body>
-    <!-- GOOD (Is se link sahi chale ga): -->
-<li><a href="portfolio.html">CONTACT</a></li>
-    <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        background: #0c1425;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    /* NAVBAR */
-    .navbar {
-        width: 100%;
-        height: 62px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 0 24px;
-
-        background: #0c1425;
-        border-bottom: 1px solid rgba(80, 110, 150, 0.08);
-    }
-
-    /* ABDULLAH GRAPHICS */
-    .logo {
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 0.4px;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-
-    .logo-name {
-        background: linear-gradient(
-            90deg,
-            #2998e8,
-            #2db8a0
-        );
-
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .logo-text {
-        color: #f1f1f1;
-    }
-
-    /* NAVIGATION */
-    .nav-links {
-        display: flex;
-        align-items: center;
-
-        gap: 34px;
-
-        list-style: none;
-    }
-
-    .nav-links a {
-        color: #9da6b5;
-
-        font-size: 14px;
-        font-weight: 600;
-
-        letter-spacing: 1px;
-
-        text-decoration: none;
-
-        transition: 0.3s ease;
-    }
-
-    .nav-links a:hover {
-        color: #2998e8;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-
-        .navbar {
-            padding: 0 15px;
-        }
-
-        .logo {
-            font-size: 16px;
-        }
-
-        .nav-links {
-            gap: 14px;
-        }
-
-        .nav-links a {
-            font-size: 10px;
-        }
-    }
-</style>
-
-
-<nav class="navbar">
-
-    <!-- LEFT LOGO -->
-    <a href="index.html" class="logo">
-        <span class="logo-name">Abdullah</span>
-        <span class="logo-text"> Graphics</span>
-    </a>
-
-    <!-- RIGHT NAVIGATION -->
-    <ul class="nav-links">
-
-        <li>
-            <a href="portfolio.html">HOME</a>
-        </li>
-
-        <li>
-            <a href="portfolio.html">PORTFOLIO</a>
-        </li>
-
-        <li>
-            <a href="about.html">ABOUT</a>
-        </li>
-
-        <li>
-            <a href="services.html">SERVICES</a>
-        </li>
-
-        <li>
-            <a href="contact form.html">CONTACT</a>
-        </li>
-
-    </ul>
-
-</nav>
-    
-   <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfolio | Abdullah Graphics</title>
 
     <!-- Poppins Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -184,50 +21,80 @@ a {
             color: #ffffff;
         }
 
-        /* =========================
-           PORTFOLIO SECTION
-        ========================= */
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            background: #0c1425;
+            border-bottom: 1px solid rgba(80, 110, 150, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
 
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .logo-name {
+            background: linear-gradient(90deg, #2998e8, #2db8a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text {
+            color: #f1f1f1;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #9da6b5;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2998e8;
+        }
+
+        /* PORTFOLIO SECTION */
         .portfolio {
             min-height: 100vh;
             padding: 155px 55px 70px;
             position: relative;
             overflow: hidden;
-
             background:
-                radial-gradient(
-                    circle at 10% 50%,
-                    rgba(30, 74, 155, 0.15),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 90% 50%,
-                    rgba(20, 125, 115, 0.12),
-                    transparent 35%
-                ),
+                radial-gradient(circle at 10% 50%, rgba(30, 74, 155, 0.15), transparent 35%),
+                radial-gradient(circle at 90% 50%, rgba(20, 125, 115, 0.12), transparent 35%),
                 #0c1425;
         }
-
-        /* GRID BACKGROUND */
 
         .portfolio::before {
             content: "";
             position: absolute;
             inset: 0;
-
             background-image:
-                linear-gradient(
-                    rgba(80, 110, 150, 0.06) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(80, 110, 150, 0.06) 1px,
-                    transparent 1px
-                );
-
+                linear-gradient(rgba(80, 110, 150, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(80, 110, 150, 0.06) 1px, transparent 1px);
             background-size: 60px 60px;
-
             pointer-events: none;
         }
 
@@ -238,105 +105,60 @@ a {
             margin: auto;
         }
 
-        /* =========================
-           SMALL TITLE
-        ========================= */
-
         .section-label {
             text-align: center;
-
             color: #2998e8;
-
             font-size: 14px;
             font-weight: 600;
-
             letter-spacing: 5px;
-
             margin-bottom: 8px;
         }
 
-        /* =========================
-           MAIN TITLE
-        ========================= */
-
         .portfolio-title {
             text-align: center;
-
             font-size: 48px;
             line-height: 1.2;
-
             font-weight: 700;
-
             margin-bottom: 12px;
         }
 
         .portfolio-title .gradient {
-            background: linear-gradient(
-                90deg,
-                #2998e8,
-                #25c278
-            );
-
+            background: linear-gradient(90deg, #2998e8, #25c278);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        /* =========================
-           DESCRIPTION
-        ========================= */
-
         .portfolio-description {
             max-width: 600px;
-
             margin: 0 auto;
-
             text-align: center;
-
             color: #7690b8;
-
             font-size: 16px;
             line-height: 1.6;
-
             margin-bottom: 48px;
         }
-
-        /* =========================
-           FILTER BUTTONS
-        ========================= */
 
         .filters {
             display: flex;
             justify-content: center;
             align-items: center;
-
             flex-wrap: wrap;
-
             gap: 12px;
-
             margin-bottom: 48px;
         }
 
         .filter-btn {
             padding: 9px 20px;
-
             border-radius: 12px;
-
             border: 1px solid #263958;
-
             background: transparent;
-
             color: #7890b5;
-
             font-family: 'Poppins', sans-serif;
-
             font-size: 13px;
             font-weight: 500;
-
             letter-spacing: 1.5px;
-
             cursor: pointer;
-
             transition: all 0.3s ease;
         }
 
@@ -347,102 +169,54 @@ a {
 
         .filter-btn.active {
             color: #071323;
-
             border-color: transparent;
-
-            background: linear-gradient(
-                90deg,
-                #3596e9,
-                #20c574
-            );
+            background: linear-gradient(90deg, #3596e9, #20c574);
         }
-
-        /* =========================
-           PORTFOLIO GRID
-        ========================= */
 
         .portfolio-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
-        /* =========================
-           PORTFOLIO CARD
-        ========================= */
-
         .portfolio-item {
             position: relative;
-
             height: 310px;
-
             overflow: hidden;
-
             border-radius: 12px;
-
             background: #121d31;
-
             cursor: pointer;
-
             border: 1px solid rgba(100, 130, 170, 0.08);
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .portfolio-item:hover {
             transform: translateY(-5px);
-
             border-color: rgba(41, 152, 232, 0.4);
         }
 
         .portfolio-item img {
             width: 100%;
             height: 100%;
-
             display: block;
-
             object-fit: cover;
-
-            transition:
-                transform 0.5s ease,
-                filter 0.5s ease;
+            transition: transform 0.5s ease, filter 0.5s ease;
         }
 
         .portfolio-item:hover img {
             transform: scale(1.06);
-
             filter: brightness(0.65);
         }
 
-        /* =========================
-           HOVER OVERLAY
-        ========================= */
-
         .item-overlay {
             position: absolute;
-
             inset: 0;
-
             display: flex;
-
             flex-direction: column;
-
             justify-content: flex-end;
-
             padding: 25px;
-
             opacity: 0;
-
-            background: linear-gradient(
-                transparent,
-                rgba(5, 12, 25, 0.95)
-            );
-
+            background: linear-gradient(transparent, rgba(5, 12, 25, 0.95));
             transition: opacity 0.3s ease;
         }
 
@@ -453,34 +227,23 @@ a {
         .item-overlay h3 {
             font-size: 18px;
             font-weight: 600;
-
             margin-bottom: 4px;
         }
 
         .item-overlay p {
             color: #7fa0c9;
-
             font-size: 13px;
         }
 
-        /* =========================
-           LIGHTBOX
-        ========================= */
-
+        /* LIGHTBOX */
         .lightbox {
             position: fixed;
-
             inset: 0;
-
             z-index: 9999;
-
             display: none;
-
             justify-content: center;
             align-items: center;
-
             padding: 40px;
-
             background: rgba(3, 8, 18, 0.94);
         }
 
@@ -491,41 +254,24 @@ a {
         .lightbox img {
             max-width: 90%;
             max-height: 88vh;
-
             object-fit: contain;
-
             border-radius: 10px;
-
-            box-shadow:
-                0 20px 80px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
         }
-
-        /* CLOSE BUTTON */
 
         .close-lightbox {
             position: fixed;
-
-            top: 0;
-            left: 50%;
-
-            transform: translateX(-50%);
-
+            top: 20px;
+            right: 30px;
             width: 48px;
             height: 48px;
-
             border-radius: 50%;
-
             border: none;
-
             background: rgba(45, 55, 70, 0.8);
-
             color: white;
-
             font-size: 30px;
             font-weight: 300;
-
             cursor: pointer;
-
             z-index: 10000;
         }
 
@@ -533,484 +279,324 @@ a {
             background: #2998e8;
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
+        /* RESPONSIVE */
         @media (max-width: 900px) {
-
             .portfolio {
                 padding: 120px 30px 60px;
             }
-
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
 
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 0 15px;
+            }
+            .logo {
+                font-size: 16px;
+            }
+            .nav-links {
+                gap: 14px;
+            }
+            .nav-links a {
+                font-size: 10px;
+            }
         }
 
         @media (max-width: 600px) {
-
             .portfolio {
                 padding: 100px 18px 50px;
             }
-
             .portfolio-title {
                 font-size: 36px;
             }
-
             .portfolio-description {
                 font-size: 14px;
             }
-
             .filters {
                 gap: 8px;
             }
-
             .filter-btn {
                 padding: 8px 13px;
                 font-size: 11px;
             }
-
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
-
             .portfolio-item {
                 height: 280px;
             }
-
         }
-
     </style>
 </head>
-
-
 <body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-name">Abdullah</span>
+            <span class="logo-text"> Graphics</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact form.html">CONTACT</a></li>
+        </ul>
+    </nav>
 
-<section class="portfolio">
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio">
+        <div class="portfolio-content">
+            <div class="section-label">PORTFOLIO</div>
+            <h1 class="portfolio-title">
+                Featured <span class="gradient">Work</span>
+            </h1>
+            <p class="portfolio-description">
+                A curated selection of logos, flyers, business cards, and social media designs.
+            </p>
 
-    <div class="portfolio-content">
+            <!-- FILTERS -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="logos">LOGOS</button>
+                <button class="filter-btn" data-filter="flyers">FLYERS</button>
+                <button class="filter-btn" data-filter="business">BUSINESS CARDS</button>
+                <button class="filter-btn" data-filter="social">SOCIAL MEDIA</button>
+                <button class="filter-btn" data-filter="illustrations">ILLUSTRATIONS</button>
+                <button class="filter-btn" data-filter="other">OTHER</button>
+            </div>
 
-        <!-- SECTION LABEL -->
-        <div class="section-label">
-            PORTFOLIO
+            <!-- PORTFOLIO GRID -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/L3.png" alt="Logo Design">
+                    <div class="item-overlay">
+                        <h3>Home Services Brand</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/L2.jpeg" alt="Logo Design">
+                    <div class="item-overlay">
+                        <h3>AG Billboard Mockup</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/L4.png" alt="Logo Design">
+                    <div class="item-overlay">
+                        <h3>AD Luxury Branding</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/L1.png" alt="Flyer Design">
+                    <div class="item-overlay">
+                        <h3>Glide Wear Packaging</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/ka4h1vt3fhrmr0cwyx7tywvjgc.png" alt="Flyer Design">
+                    <div class="item-overlay">
+                        <h3>AK Leather Journal</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/processed-image.png" alt="Flyer Design">
+                    <div class="item-overlay">
+                        <h3>Victory Heel Branding</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="logos">
+                    <img src="images/1000073387-ezremove.png" alt="Business Card">
+                    <div class="item-overlay">
+                        <h3>Kitchen Of Tastes (KOT)</h3>
+                        <p>LOGOS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="flyers">
+                    <img src="images/Gemini_Generated_Image_tj0ljstj0ljstj0l.jpeg" alt="Business Card">
+                    <div class="item-overlay">
+                        <h3>Travel Agency Flyer</h3>
+                        <p>FLYERS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="flyers">
+                    <img src="images/wmremove-transformed.png" alt="Business Card">
+                    <div class="item-overlay">
+                        <h3>Design Services Flyer</h3>
+                        <p>FLYERS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="business">
+                    <img src="images/business-card-mockup-on-wooden-board.png" alt="Social Media Design">
+                    <div class="item-overlay">
+                        <h3>AG Business Card</h3>
+                        <p>BUSINESS CARDS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="business">
+                    <img src="images/business-cards-on-wall-mockup.png" alt="Social Media Design">
+                    <div class="item-overlay">
+                        <h3>Glide Wear Business Card</h3>
+                        <p>BUSINESS CARDS</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <img src="images/Gemini_Generated_Image_4bralk4bralk4bra.jpeg" alt="Social Media Design">
+                    <div class="item-overlay">
+                        <h3>Freelancer Course Post</h3>
+                        <p>SOCIAL MEDIA</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <img src="images/Gemini_Generated_Image_b2y9u3b2y9u3b2y9.jpeg" alt="Illustration">
+                    <div class="item-overlay">
+                        <h3>Digital Marketing Post</h3>
+                        <p>SOCIAL MEDIA</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <img src="images/instagram-post-mockup.png" alt="Illustration">
+                    <div class="item-overlay">
+                        <h3>Marketing Agency Post</h3>
+                        <p>SOCIAL MEDIA</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <img src="images/Screenshot 2026-03-08 174248.png" alt="Illustration">
+                    <div class="item-overlay">
+                        <h3>Hiring Ad Post</h3>
+                        <p>SOCIAL MEDIA</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="other">
+                    <img src="images/ChatGPT Image Mar 8, 2026, 06_03_47 PM.png" alt="Graphic Design">
+                    <div class="item-overlay">
+                        <h3>Heena Artistry Banner</h3>
+                        <p>OTHER</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="other">
+                    <img src="images/ChatGPT Image Mar 8, 2026, 06_20_33 PM.png" alt="Graphic Design">
+                    <div class="item-overlay">
+                        <h3>Jinnah City Receipt</h3>
+                        <p>OTHER</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="other">
+                    <img src="images/Gemini_Generated_Image_ujetmcujetmcujet.png" alt="Graphic Design">
+                    <div class="item-overlay">
+                        <h3>AG Letterhead</h3>
+                        <p>OTHER</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="other">
+                    <img src="images/nk56zy86rxrmt0cwspvbekvdcw.png" alt="Logo Design">
+                    <div class="item-overlay">
+                        <h3>Glide Wear Letterhead</h3>
+                        <p>OTHER</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="other">
+                    <img src="images/z-fold-mockup.png" alt="Social Media Design">
+                    <div class="item-overlay">
+                        <h3>Glide Wear Brochure</h3>
+                        <p>OTHER</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="illustrations">
+                    <img src="images/illustration (1).jpg" alt="Flyer Design">
+                    <div class="item-overlay">
+                        <h3>Vector Portrait Illustration</h3>
+                        <p>ILLUSTRATIONS</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-
-        <!-- TITLE -->
-        <h1 class="portfolio-title">
-            Featured
-            <span class="gradient">Work</span>
-        </h1>
-
-
-        <!-- DESCRIPTION -->
-        <p class="portfolio-description">
-            A curated selection of logos, flyers, business cards,
-            and social media designs.
-        </p>
-
-
-        <!-- FILTERS -->
-        <div class="filters">
-
-            <button class="filter-btn active" data-filter="all">
-                ALL
-            </button>
-
-            <button class="filter-btn" data-filter="logos">
-                LOGOS
-            </button>
-
-            <button class="filter-btn" data-filter="flyers">
-                FLYERS
-            </button>
-
-            <button class="filter-btn" data-filter="business">
-                BUSINESS CARDS
-            </button>
-
-            <button class="filter-btn" data-filter="social">
-                SOCIAL MEDIA
-            </button>
-
-            <button class="filter-btn" data-filter="illustrations">
-                ILLUSTRATIONS
-            </button>
-
-            <button class="filter-btn" data-filter="other">
-                OTHER
-            </button>
-
-        </div>
-
-
-        <!-- =========================
-             21 PORTFOLIO IMAGES
-        ========================= -->
-
-        <div class="portfolio-grid">
-
-
-            <!-- 01 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/L3.png" alt="Logo Design">
-                <div class="item-overlay">
-                    <h3>Home Services Brand</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 02 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/L2.jpeg" alt="Logo Design">
-                <div class="item-overlay">
-                    <h3>AG Billboard Mockup</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 03 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/L4.png" alt="Logo Design">
-                <div class="item-overlay">
-                    <h3>AD Luxury Branding</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 04 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/L1.png" alt="Flyer Design">
-                <div class="item-overlay">
-                    <h3>Glide Wear Packaging</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 05 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/ka4h1vt3fhrmr0cwyx7tywvjgc.png" alt="Flyer Design">
-                <div class="item-overlay">
-                    <h3>AK Leather Journal</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 06 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/processed-image.png" alt="Flyer Design">
-                <div class="item-overlay">
-                    <h3>Victory Heel Branding</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 07 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/1000073387-ezremove.png" alt="Business Card">
-                <div class="item-overlay">
-                    <h3>Kitchen Of Tastes (KOT)</h3>
-                    <p>LOGOS</p>
-                </div>
-            </div>
-
-
-            <!-- 08 -->
-            <div class="portfolio-item" data-category="FLYERS">
-                <img src="images/Gemini_Generated_Image_tj0ljstj0ljstj0l.jpeg" alt="Business Card">
-                <div class="item-overlay">
-                    <h3>Travel Agency Flyer</h3>
-                    <p>FLYERS</p>
-                </div>
-            </div>
-
-
-            <!-- 09 -->
-            <div class="portfolio-item" data-category="FLYERS">
-                <img src="images/wmremove-transformed.png" alt="Business Card">
-                <div class="item-overlay">
-                    <h3>Design Services Flyer</h3>
-                    <p>FLYERS</p>
-                </div>
-            </div>
-
-
-            <!-- 10 -->
-            <div class="portfolio-item" data-category="social">
-                <img src="images/business-card-mockup-on-wooden-board.png" alt="Social Media Design">
-                <div class="item-overlay">
-                    <h3>AG Business Card</h3>
-                    <p>BUSINESS CARDS</p>
-                </div>
-            </div>
-
-
-            <!-- 11 -->
-            <div class="portfolio-item" data-category="social">
-                <img src="images/business-cards-on-wall-mockup.png" alt="Social Media Design">
-                <div class="item-overlay">
-                    <h3>Glide Wear Business Card</h3>
-                    <p>BUSINESS CARDS</p>
-                </div>
-            </div>
-
-
-            <!-- 12 -->
-            <div class="portfolio-item" data-category="social">
-                <img src="images/Gemini_Generated_Image_4bralk4bralk4bra.jpeg" alt="Social Media Design">
-                <div class="item-overlay">
-                    <h3>Freelancer Course Post</h3>
-                    <p>SOCIAL MEDIA</p>
-                </div>
-            </div>
-
-
-            <!-- 13 -->
-            <div class="portfolio-item" data-category="illustrations">
-                <img src="images/Gemini_Generated_Image_b2y9u3b2y9u3b2y9.jpeg" alt="Illustration">
-                <div class="item-overlay">
-                    <h3>Digital Marketing Post</h3>
-                    <p>SOCIAL MEDIA</p>
-                </div>
-            </div>
-
-
-            <!-- 14 -->
-            <div class="portfolio-item" data-category="illustrations">
-                <img src="images/instagram-post-mockup.png" alt="Illustration">
-                <div class="item-overlay">
-                    <h3>Marketing Agency Post</h3>
-                    <p>SOCIAL MEDIA</p>
-                </div>
-            </div>
-
-
-            <!-- 15 -->
-            <div class="portfolio-item" data-category="illustrations">
-                <img src="images/Screenshot 2026-03-08 174248.png" alt="Illustration">
-                <div class="item-overlay">
-                    <h3>Hiring Ad Post</h3>
-                    <p>SOCIAL MEDIA</p>
-                </div>
-            </div>
-
-
-            <!-- 16 -->
-            <div class="portfolio-item" data-category="other">
-                <img src="images/ChatGPT Image Mar 8, 2026, 06_03_47 PM.png" alt="Graphic Design">
-                <div class="item-overlay">
-                    <h3>Heena Artistry Banner</h3>
-                    <p>OTHER</p>
-                </div>
-            </div>
-
-
-            <!-- 17 -->
-            <div class="portfolio-item" data-category="other">
-                <img src="images/ChatGPT Image Mar 8, 2026, 06_20_33 PM.png" alt="Graphic Design">
-                <div class="item-overlay">
-                    <h3>Jinnah City Receipt</h3>
-                    <p>OTHER</p>
-                </div>
-            </div>
-
-
-            <!-- 18 -->
-            <div class="portfolio-item" data-category="other">
-                <img src="images/Gemini_Generated_Image_ujetmcujetmcujet.png" alt="Graphic Design">
-                <div class="item-overlay">
-                    <h3>AG Letterhead</h3>
-                    <p>OTHER</p>
-                </div>
-            </div>
-
-
-            <!-- 19 -->
-            <div class="portfolio-item" data-category="logos">
-                <img src="images/nk56zy86rxrmt0cwspvbekvdcw.png" alt="Logo Design">
-                <div class="item-overlay">
-                    <h3>Glide Wear Letterhead</h3>
-                    <p>OTHER</p>
-                </div>
-            </div>
-
-
-            <!-- 20 -->
-            <div class="portfolio-item" data-category="social">
-                <img src="images/z-fold-mockup.png" alt="Social Media Design">
-                <div class="item-overlay">
-                    <h3>Glide Wear Brochure</h3>
-                    <p>OTHER</p>
-                </div>
-            </div>
-
-
-            <!-- 21 -->
-            <div class="portfolio-item" data-category="flyers">
-                <img src="images/illustration (1).jpg" alt="Flyer Design">
-                <div class="item-overlay">
-                    <h3>Vector Portrait Illustration</h3>
-                    <p>ILLUSTRATIONS</p>
-                </div>
-            </div>
-
-
-        </div>
-
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" id="closeLightbox">&times;</button>
+        <img id="lightboxImage" src="" alt="Portfolio Preview">
     </div>
 
-</section>
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
 
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
 
-<!-- =========================
-     IMAGE LIGHTBOX
-========================= -->
+                const filter = button.getAttribute("data-filter");
 
-<div class="lightbox" id="lightbox">
-
-    <button class="close-lightbox" id="closeLightbox">
-        ×
-    </button>
-
-    <img id="lightboxImage" src="" alt="Portfolio Preview">
-
-</div>
-
-
-<script>
-
-    /* =========================
-       FILTER SYSTEM
-    ========================= */
-
-    const filterButtons =
-        document.querySelectorAll(".filter-btn");
-
-    const portfolioItems =
-        document.querySelectorAll(".portfolio-item");
-
-
-    filterButtons.forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            /* Remove active */
-            filterButtons.forEach(btn => {
-                btn.classList.remove("active");
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute("data-category");
+                    if (filter === "all" || category === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
             });
-
-            /* Add active */
-            button.classList.add("active");
-
-            const filter =
-                button.getAttribute("data-filter");
-
-
-            portfolioItems.forEach(item => {
-
-                const category =
-                    item.getAttribute("data-category");
-
-
-                if (
-                    filter === "all" ||
-                    category === filter
-                ) {
-
-                    item.style.display = "block";
-
-                } else {
-
-                    item.style.display = "none";
-
-                }
-
-            });
-
         });
 
-    });
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const closeLightbox = document.getElementById("closeLightbox");
 
-
-    /* =========================
-       LIGHTBOX
-    ========================= */
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    const lightboxImage =
-        document.getElementById("lightboxImage");
-
-    const closeLightbox =
-        document.getElementById("closeLightbox");
-
-
-    portfolioItems.forEach(item => {
-
-        item.addEventListener("click", () => {
-
-            const image =
-                item.querySelector("img");
-
-            lightboxImage.src =
-                image.src;
-
-            lightbox.classList.add("show");
-
+        portfolioItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const image = item.querySelector("img");
+                lightboxImage.src = image.src;
+                lightbox.classList.add("show");
+            });
         });
 
-    });
-
-
-    /* CLOSE */
-
-    closeLightbox.addEventListener("click", () => {
-
-        lightbox.classList.remove("show");
-
-    });
-
-
-    /* CLICK OUTSIDE */
-
-    lightbox.addEventListener("click", (event) => {
-
-        if (event.target === lightbox) {
-
+        closeLightbox.addEventListener("click", () => {
             lightbox.classList.remove("show");
+        });
 
-        }
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                lightbox.classList.remove("show");
+            }
+        });
 
-    });
-
-
-    /* ESC KEY */
-
-    document.addEventListener("keydown", (event) => {
-
-        if (event.key === "Escape") {
-
-            lightbox.classList.remove("show");
-
-        }
-
-    });
-
-</script>
-
-
-</body>
-</html>
-
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                lightbox.classList.remove("show");
+            }
+        });
+    </script>
 </body>
 </html>
